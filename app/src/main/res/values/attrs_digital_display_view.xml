@@ -1,0 +1,15 @@
+<resources>
+    <declare-styleable name="DigitalDisplayView">
+        <attr name="subscriptUnits" format="string" />
+        <attr name="colorPicker" format="enum">
+            <enum name="Red"    value="0"/>
+            <enum name="Orange" value="1"/>
+            <enum name="Yellow" value="2"/>
+            <enum name="Green"  value="3"/>
+            <enum name="Blue"   value="4"/>
+            <enum name="Purple" value="5"/>
+            <enum name="Violet" value="6"/>
+        </attr>
+
+    </declare-styleable>
+</resources>

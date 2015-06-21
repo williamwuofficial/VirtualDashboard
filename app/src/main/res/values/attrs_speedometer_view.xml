@@ -1,0 +1,18 @@
+<resources>
+    <declare-styleable name="SpeedometerView">
+        <!-- Actual Values -->
+        <attr name="backgroundImage" format="color|reference" />
+        <attr name="customTheme" format="enum">
+            <enum name="NightTime" value="0"/>
+            <enum name="DayTime" value="1"/>
+        </attr>
+        <attr name="minVal" format="integer" />
+        <attr name="maxVal" format="integer" />
+        <attr name="tickStepInterval" format="integer" />
+        <attr name="ticksPerInterval" format="integer" />
+        <attr name="displayUnits" format="string" />
+
+
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="horizontal"
+    tools:context="com.projects.team.experimental.virtualdashboard.ViewEditor">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:layout_width="0dp"
+        android:layout_weight="0.12"
+        android:layout_height="match_parent"
+        class="com.projects.team.experimental.virtualdashboard.Editor.EditorListFragment"
+        tools:layout="@layout/fragment_item_list">
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:layout_width="0dp"
+        android:layout_weight="0.9"
+        android:layout_height="match_parent"
+        class="com.projects.team.experimental.virtualdashboard.Editor.EditorViewFragment"
+        tools:layout="@layout/fragment_editor_view">
+    </fragment>
+
+
+</LinearLayout>

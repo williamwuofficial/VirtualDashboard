@@ -1,0 +1,219 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2">
+
+        <TextView
+            android:id="@+id/tvSkinName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textSize="60dp"
+            android:text="Custom Skin Name"
+            />
+
+        <RelativeLayout
+            android:id="@+id/widgetPane"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:background="@drawable/border"
+            android:layout_gravity="center">
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etNewSkinName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btSetSkinName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Name"
+                android:enabled="false"
+                android:layout_gravity="bottom" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/editorPane"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_weight="0.8"
+        android:layout_height="fill_parent"
+        android:paddingLeft="6dp"
+        >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="View Editor"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Pick a widget"
+            android:id="@+id/tvChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:id="@+id/spEditWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChoose"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Size slider"
+            android:id="@+id/tvSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spEditWidget"
+            android:layout_alignParentStart="true" />
+
+        <SeekBar
+            android:id="@+id/sbSize"
+            android:layout_below="@+id/tvSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:max="100" />
+
+
+        <TextView
+            android:text="Pick a color/theme"
+            android:id="@+id/tvColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sbSize"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:id="@+id/spColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvColor"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Display format"
+            android:id="@+id/tvFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spColor"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:id="@+id/spDisplayFormat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFormat"
+            android:layout_alignParentEnd="true" />
+
+
+        <TextView
+            android:text="Display Data"
+            android:id="@+id/tvData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spDisplayFormat"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:text="Velocity"
+            android:id="@+id/cbVelocity"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvData"
+            android:layout_alignParentEnd="true" />
+
+        <CheckBox
+            android:text="Acceleration"
+            android:id="@+id/cbAcceleration"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbVelocity"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:text="RPM"
+            android:id="@+id/cbRPM"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbAcceleration"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:text="Distance"
+            android:id="@+id/cbDistance"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbRPM"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:text="Horsepower"
+            android:id="@+id/cbHorsepower"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbDistance"
+            android:layout_alignEnd="@+id/cbDistance" />
+
+        <Button
+            android:text="Save"
+            android:id="@+id/bSave"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_above="@+id/bSet"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Set Skin"
+            android:id="@+id/bSet"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.projects.team.experimental.virtualdashboard" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="landscape">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewEditor"
+            android:label="@string/title_activity_view_editor"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".BluetoothDebugger"
+            android:label="@string/title_activity_bluetooth_debugger"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".Bluetooth.DeviceListActivity"
+            android:label="@string/title_activity_device_list"
+            android:theme="@android:style/Theme.Dialog">
+        </activity>
+
+        <service
+            android:name=".Bluetooth.UartService"
+            android:enabled="true">
+        </service>
+    </application>
+
+</manifest>

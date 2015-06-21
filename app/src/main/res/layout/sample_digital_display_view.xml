@@ -1,0 +1,17 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.projects.team.experimental.virtualdashboard.DigitalGauge.DigitalDisplayView
+        android:background="#ccc"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="40dp"
+
+        custom:subscriptUnits="km/hr"
+        custom:colorPicker="Red"
+
+        />
+
+</FrameLayout>
