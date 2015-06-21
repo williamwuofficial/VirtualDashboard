@@ -7,3 +7,5 @@ Connection to a Bluetooth 4.0 LE device. Send comma separated values to change d
 More details coming soon... 
 
 ![alt tag](https://raw.github.com/willtmwu/VirtualDashboard/master/pictures/ViewEditor.png)
+
+![alt tag](https://raw.github.com/willtmwu/VirtualDashboard/master/pictures/VirtualDashboard.png)
